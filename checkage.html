@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Message Generator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        #messageDisplay {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        #generateButton {
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: #e8491d;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Love Message Generator</h1>
+
+    <div id="messageDisplay">
+        <p id="message">Click the button to generate a sweet message!</p>
+    </div>
+
+    <button id="generateButton" onclick="generateMessage()">Generate Message</button>
+
+    <script>
+        function generateMessage() {
+            var messages = [
+                "You make my world brighter every day.",
+                "Your smile is my favorite thing in the world.",
+                "I am grateful to have you in my life.",
+                "You are the most beautiful person, inside and out.",
+                "Every moment with you is precious to me.",
+                "I love you more than words can express."
+            ];
+
+            var randomIndex = Math.floor(Math.random() * messages.length);
+            var generatedMessage = messages[randomIndex];
+
+            document.getElementById("message").innerHTML = generatedMessage;
+        }
+    </script>
+
+</body>
+</html>
